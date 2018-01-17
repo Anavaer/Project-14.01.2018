@@ -11,6 +11,11 @@ import App from './components/App';
 import Single from './components/Single';
 import PhotoGrid from './components/PhotoGrid';
 
+import Raven from 'raven-js';
+import {sentry_url} from "./data/config";
+
+Raven.config(sentry_url).install();
+
 const router = (
   <Provider store={store}>
     <Router history={history}>
